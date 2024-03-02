@@ -1,4 +1,4 @@
-💯 Seasoned software developer with over 10 years of experience in software development
+Seasoned software developer with over 10 years of experience in software development
 
 <!---
 alibaqbani/alibaqbani is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
