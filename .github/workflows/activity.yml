@@ -19,6 +19,6 @@ jobs:
           USERNAME: "rahulblg" # Hashnode Username
           COUNT: 4 # MAX Visisble
           STYLE: "blog-left"
-          BLOG_URL: "https://rahulprasad.hashnode.dev/"
+          BLOG_URL: "https://alibaq.hashnode.dev/"
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
