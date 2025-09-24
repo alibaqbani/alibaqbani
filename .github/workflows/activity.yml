@@ -1,97 +1,24 @@
-name: Update README from Blog Backup
+name: "📚 latest Blog"
 
 on:
-  # Run this workflow every 6 hours
-  schedule:
-    - cron: '0 */6 * * *'
-  # Allow manual runs from the Actions tab
   workflow_dispatch:
+  schedule:
+    - cron:  "0 * * * *" # Runs every hour, on the hour
 
 jobs:
-  update-readme:
+  update_blogs:
+    name: "Update With Latest Blogs"
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
-      # Step 1: Checkout your main profile repository
-      - name: Checkout Profile Repo
-        uses: actions/checkout@v4
+      - name: "📥  Fetching Repository Contents"
+        uses: actions/checkout@main
 
-      # Step 2: Checkout your PRIVATE blog backup repository into a folder named 'blog'
-      - name: Checkout Blog Backup Repo
-        uses: actions/checkout@v4
+      - name: "📚  Hashnode Updater"
+        uses: "varunsridharan/action-hashnode-blog@1.1.1"
         with:
-          # IMPORTANT: Replace this with your blog backup repository name
-          repository: alibaqbani/hashnode-backup
-          # This is the Personal Access Token needed to access your PRIVATE repo
-          token: ${{ secrets.ACCESS_TOKEN }}
-          # Checkout the blog content into a sub-folder named 'blog'
-          path: 'blog'
-
-      # Step 3: Run a Python script to read the latest posts and update the README
-      - name: Update README with latest posts
-        run: |
-          python - <<'EOF'
-          import os
-          import glob
-          import re
-
-          # Path to the blog posts checked out in the previous step
-          posts_dir = 'blog'
-          # Number of posts to display
-          num_posts = 5
-          # The start and end markers in your README
-          start_marker = ""
-          end_marker = ""
-          readme_file = "README.md"
-          
-          # Find all markdown files and their creation times
-          posts = []
-          for filepath in glob.glob(os.path.join(posts_dir, '*.md')):
-              with open(filepath, 'r', encoding='utf-8') as f:
-                  content = f.read()
-                  # A simple way to get title from frontmatter
-                  title_match = re.search(r'title:\s*["\']?(.*?)["\']?\n', content)
-                  # A simple way to get the slug from frontmatter
-                  slug_match = re.search(r'slug:\s*["\']?(.*?)["\']?\n', content)
-                  
-                  if title_match and slug_match:
-                      title = title_match.group(1).strip()
-                      slug = slug_match.group(1).strip()
-                      # Get creation time of the file
-                      ctime = os.path.getctime(filepath)
-                      # Assume your blog URL structure
-                      url = f"https://YOUR_BLOG_DOMAIN.COM/{slug}"
-                      posts.append({'title': title, 'url': url, 'ctime': ctime})
-
-          # Sort posts by creation time, newest first
-          posts.sort(key=lambda x: x['ctime'], reverse=True)
-          
-          # Create the new list of posts in Markdown format
-          new_content = "\n"
-          for post in posts[:num_posts]:
-              new_content += f"- [{post['title']}]({post['url']})\n"
-          new_content += "\n"
-
-          # Read the current README
-          with open(readme_file, 'r', encoding='utf-8') as f:
-              readme_content = f.read()
-
-          # Replace the content between the markers
-          # Using re.DOTALL to make '.' match newlines
-          updated_readme = re.sub(f"({re.escape(start_marker)}).*?({re.escape(end_marker)})", f"\\1{new_content}\\2", readme_content, flags=re.DOTALL)
-
-          # Write the new content back to the README
-          with open(readme_file, 'w', encoding='utf-8') as f:
-              f.write(updated_readme)
-              
-          print(f"Successfully updated README with {len(posts[:num_posts])} posts.")
-          EOF
-
-      # Step 4: Commit the changes back to your profile repository if any were made
-      - name: Commit and Push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: update readme with latest blog posts"
-          file_pattern: README.md
+          USERNAME: "rahulblg" # Hashnode Username
+          COUNT: 4 # MAX Visisble
+          STYLE: "blog-left"
+          BLOG_URL: "https://rahulprasad.hashnode.dev/"
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
