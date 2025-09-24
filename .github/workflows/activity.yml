@@ -18,7 +18,7 @@ jobs:
       - name: Update README with Recent GitHub Activity
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          feed_list: "https://@alibaqbani.hashnode.dev/rss.xml"
+          feed_list: "https://alibaq.hashnode.dev/rss.xml"
           max_post_count: 5
           readme_path: './README.md'
           comment_tag_name: "activity"
