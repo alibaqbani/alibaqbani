@@ -1,0 +1,34 @@
+name: Update README with Recent Activity
+
+on:
+  # This runs the job on a schedule (every 12 hours)
+  schedule:
+    - cron: '0 */12 * * *'
+  # This allows you to run the workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # This permission is required to update the README
+      
+    steps:
+      # Step 1: Checks out your repository's code so the action can access it
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Step 2: Runs the action to fetch recent activity and update the README
+      - name: Update README with Recent GitHub Activity
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          # The Atom feed URL for your public GitHub activity
+          feed_list: "https://github.com/alibaqbani.atom"
+          # The maximum number of items to display
+          max_post_count: 5
+          # The path to the README file to be updated
+          readme_path: './README.md'
+          # The name of the comment tag in your README
+          comment_tag_name: "activity"
+          # A good commit message for the automated commit
+          commit_message: "chore: update readme with recent activity"
