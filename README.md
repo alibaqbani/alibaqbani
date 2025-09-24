@@ -5,12 +5,12 @@
   <a href="https://github.com/alibaqbani" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
   </a>
-  </div>
+</div>
 
 <pre align="center">
-       \     |     _ _|      __ )     \      _ \   __ )     \      \  | _ _| 
-    _ \    |       |       __ \    _ \    |   |  __ \    _ \      \ |   |  
-   ___ \   |       |       |   |  ___ \   |   |  |   |  ___ \   |\  |   |  
+      \     |     _ _|      __ )      \      _ \    __ )      \       \  | _ _| 
+    _ \   |         |      __ \    _ \    |   |  __ \    _ \        \ |   |  
+   ___ \  |         |      |   |  ___ \   |   |  |   |  ___ \    |\  |   |  
  _/    _\ _____| ___|     ____/ _/    _\ \__\_\ ____/ _/    _\ _| \_| ___| 
 </pre>
 
