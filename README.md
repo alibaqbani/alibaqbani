@@ -91,8 +91,8 @@ Right now, my main focus is on designing and prototyping autonomous agent framew
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=alibaqbani&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
+<img src="https://github-readme-stats-rho-one-13.vercel.app/api?username=alibaqbani&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=alibaqbani&layout=compact&langs_count=8&theme=dracula"/>
+<img src="https://github-readme-stats-rho-one-13.vercel.app/api/top-langs/?username=alibaqbani&layout=compact&langs_count=8&theme=dracula"/>
 
 </div>
