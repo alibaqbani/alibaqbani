@@ -23,7 +23,7 @@ jobs:
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
           # The Atom feed URL for your public GitHub activity
-          feed_list: "https://github.com/alibaqbani.atom"
+          feed_list: "https://alibaq.hashnode.dev/rss.xml"
           # The maximum number of items to display
           max_post_count: 5
           # The path to the README file to be updated
