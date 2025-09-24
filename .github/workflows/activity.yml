@@ -1,24 +1,25 @@
-name: "📚 latest Blog"
+name: Update README with Recent Activity
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron:  "0 * * * *" # Runs every hour, on the hour
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
 
 jobs:
-  update_blogs:
-    name: "Update With Latest Blogs"
+  update-readme:
     runs-on: ubuntu-latest
-    steps:
-      - name: "📥  Fetching Repository Contents"
-        uses: actions/checkout@main
+    permissions:
+      contents: write
 
-      - name: "📚  Hashnode Updater"
-        uses: "varunsridharan/action-hashnode-blog@1.1.1"
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Update README with Recent GitHub Activity
+        uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          USERNAME: "alibaqbani" # Hashnode Username
-          COUNT: 4 # MAX Visisble
-          STYLE: "blog-left"
-          BLOG_URL: "https://alibaq.hashnode.dev/"
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          feed_list: "https://@alibaqbani.hashnode.dev/rss.xml"
+          max_post_count: 5
+          readme_path: './README.md'
+          comment_tag_name: "activity"
+          commit_message: "chore: update readme with recent activity"
