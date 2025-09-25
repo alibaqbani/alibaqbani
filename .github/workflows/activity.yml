@@ -18,11 +18,11 @@ jobs:
       - name: Update README with Recent GitHub Activity
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          feed_list: "https://alibaq.hashnode.dev/rss.xml"
+          feed_list: "https://medium.com/feed/@alibaq"
           max_post_count: 5
           readme_path: './README.md'
           comment_tag_name: "activity"
-          retry_count: 3
+          retry_count: 1
           commit_message: "chore: update readme with recent activity"
           user_agent: 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0'
           accept_header: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8'
