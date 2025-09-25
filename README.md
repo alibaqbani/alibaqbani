@@ -90,8 +90,8 @@ Here's a snapshot of the tools and technologies I wield.
 Right now, my main focus is on designing and prototyping autonomous agent frameworks. I'm exploring how teams of specialized AI agents can collaborate to solve complex, multi-step problems with minimal human intervention.
 
 ### Latest Blogs
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
+<!-- activity:START -->
+<!-- activity:END -->
 
 <div align="center">
 
@@ -100,3 +100,4 @@ Right now, my main focus is on designing and prototyping autonomous agent framew
 <img src="https://github-readme-stats-rho-one-13.vercel.app/api/top-langs/?username=alibaqbani&layout=compact&langs_count=8&theme=dracula"/>
 
 </div>
+
