@@ -91,6 +91,7 @@ Right now, my main focus is on designing and prototyping autonomous agent framew
 
 ### Latest Blogs
 <!-- activity:START -->
+- [The Architect’s Playbook for Production-Grade AI](https://medium.com/@alibaq/the-architects-playbook-for-production-grade-ai-07e81d554345?source=rss-65fc38efaf4f------2)
 - [Beyond Automation: Why Your Next Hire Should Be an Autonomous System](https://medium.com/@alibaq/beyond-automation-why-your-next-hire-should-be-an-autonomous-system-4ebef9dc72a2?source=rss-65fc38efaf4f------2)
 <!-- activity:END -->
 
