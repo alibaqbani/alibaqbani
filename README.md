@@ -95,11 +95,12 @@ Right now, my main focus is on designing and prototyping autonomous agent framew
 - [Beyond Automation: Why Your Next Hire Should Be an Autonomous System](https://medium.com/@alibaq/beyond-automation-why-your-next-hire-should-be-an-autonomous-system-4ebef9dc72a2?source=rss-65fc38efaf4f------2)
 <!-- activity:END -->
 
-<div align="center">
+<!-- <div align="center">
 
 <img src="https://github-readme-stats-rho-one-13.vercel.app/api?username=alibaqbani&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
 
 <img src="https://github-readme-stats-rho-one-13.vercel.app/api/top-langs/?username=alibaqbani&layout=compact&langs_count=8&theme=dracula"/>
 
-</div>
+</div> -->
+
 
